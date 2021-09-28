@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+
+<head>
+    <script>
+        var stockId = ["S001", "S002", "S003",
+                "S004","S005"];
+        var itemname = ["Maggi", "Hide N Seek", "Pepsi", "Boost", "Chocos"];
+   		var quan = [100,60,24,89,45];
+   		var desc = ["Noodles","Biscuit","Soft Drink","Energy Drink","Breakfast"];
+ 
+   		
+   		function stock1(){
+   			stockForm.itemname.value = itemname[0];
+   			stockForm.quan.value=quan[0];
+   			stockForm.desc.value = desc[0];
+   		}
+   		
+   		function stock2(){
+   			stockForm.itemname.value = itemname[1];
+   			stockForm.quan.value=quan[1];
+   			stockForm.desc.value = desc[1];
+   		}
+   		
+   		function stock3(){
+   			stockForm.itemname.value = itemname[2];
+   			stockForm.quan.value=quan[2];
+   			stockForm.desc.value = desc[2];
+   		}
+   		
+   		function stock4(){
+   			stockForm.itemname.value = itemname[3];
+   			stockForm.quan.value=quan[3];
+   			stockForm.desc.value = desc[3];
+   		}
+   		
+   		function stock5(){
+   			stockForm.itemname.value = itemname[4];
+   			stockForm.quan.value=quan[4];
+   			stockForm.desc.value = desc[4];
+   		}
+   		
+        function show() {
+            var result = "";
+            result += "Stock Id  " + stockForm.stockId.value + "<br/>";
+            result += "Item Name  " + stockForm.itemname.value + "<br/>";
+            result += "Quantity Available  " + stockForm.quan.value + "<br/>";
+            result += "Item Description  " + stockForm.desc.value + "<br/>";
+            result += "City  " + stockForm.city.value + "<br/>";
+            result += "Zip  " + stockForm.zip.value + "<br/>";
+            document.getElementById("result").innerHTML = result;
+        }
+    
+    </script>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body >
+    <form name="stockForm">
+        <table border="3" align="center">
+            <tr>
+                <th>Stock ID</th>
+                <td>
+                    <select name="stockId" id="stockId">
+  <option  onclick="stock1()">S001</option>
+  <option  onclick="stock2()">S002</option>
+  <option  onclick="stock3()">S003</option>
+  <option  onclick="stock4()" >S004</option>
+  <option onclick = "stock5()">S005</option>
+</select>
+                </td>
+            </tr>
+            <tr>
+                <th>Item Name</th>
+                <td>
+                    <input type="text" name="itemname" readonly />
+                    
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <th>Quantity Available</th>
+                <td>
+                     <input type="number" name="quan" readonly />
+
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                     <input type="text" name="desc" readonly />
+                </td>
+            </tr>
+
+            <tr>
+                <th>City</th>
+                <td>
+                    <select name="city">
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Zip Code</th>
+                <td>
+                    <input type="text" name="zip" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Submit" onclick="show()" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="Reset" />
+                </th>
+            </tr>
+
+        </table>
+    </form>
+    <span id="result">
+
+    </span>
+</body>
+</html>
